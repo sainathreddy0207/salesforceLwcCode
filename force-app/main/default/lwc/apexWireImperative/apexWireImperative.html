@@ -1,0 +1,21 @@
+<template>
+    
+    <lightning-card title="Apex Wire">
+        <div class="slds-p-around_medium">
+            <lightning-button variant="destructive" label="Fetch Accounts" onclick={handleClick}></lightning-button>
+            </div>
+        <div class="slds-p-around_medium">
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div class="slds-box slds-box_xx-small" key={account.id}>
+
+                        <p><strong>Name: </strong> {account.Name}</p>
+                        <p><strong>Type: </strong> {account.Type}</p>
+                        <p><strong>Phone: </strong> {account.Phone}</p>
+
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

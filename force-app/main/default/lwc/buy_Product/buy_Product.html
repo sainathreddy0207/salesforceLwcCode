@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Active Products">
+        <div class="slds-grid slds-wrap slds-tile slds-tile_board">
+            <template for:each={products} for:item="product">
+                <div key={product.product.Id} class="slds-size_1-of-3 slds-p-around_small slds-tile slds-tile_board">
+                    <lightning-tile>
+                        <h2 class="slds-text-heading_small slds-tile slds-tile_board slds-tile__title slds-truncate">{product.product.Name}</h2>
+                        <p class="slds-text-body_small slds-tile slds-tile_board">Price: ${product.product.Price__c}</p>
+                        <p class="slds-text-body_small slds-tile slds-tile_board">Delivery Date: {product.deliveryDate}</p>
+                        
+                        <div class="slds-float_right">
+                            <lightning-button label="Buy" onclick={buyProduct} data-product-id={product.product.Id}></lightning-button>
+                        </div>
+                    </lightning-tile>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+
+</template>

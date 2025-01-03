@@ -1,0 +1,19 @@
+/*element , classes, Pseduo */
+
+p{
+    color: blue;
+    font-size: 35px;
+    border: 1px solid red;
+}
+
+.cyber{
+    color: red;
+    font-size: 49px;
+    border: 3px solid rgb(0, 212, 166);
+}
+
+.cyber:hover{
+    color: rgb(187, 255, 0);
+    font-size: 63px;
+    border: 5px solid rgb(0, 212, 166);
+}

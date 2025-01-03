@@ -1,0 +1,10 @@
+.wrapper{
+    width:100%;
+    background-color: aliceblue;
+}
+
+.skill{
+    text-align: right;
+    padding-top: 14px;
+    padding-bottom: 21px;
+}

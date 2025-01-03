@@ -1,0 +1,13 @@
+<template>
+    <lightning-card  title="Conditional Rendering">
+        <div class="slds-var-m-around_medium">
+        
+        <lightning-button class = "slds-var-m-left_left-x-small" variant ="brand"  title = "Show data" label = "show data" onclick = {handleclick} > </lightning-button>
+
+        
+        <template if:true={isVisibile}>
+           <div>Hi Sainath how is 4019</div> 
+        </template>
+    </div>
+    </lightning-card>
+</template>

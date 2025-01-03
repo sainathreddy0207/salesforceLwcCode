@@ -1,0 +1,59 @@
+<apex:page standardController="Billing__c" extensions="PrintBillController">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+    </style>
+
+    <img src="URL_OF_YOUR_LOGO_IMAGE" alt="Deepu Car Care Logo" class="logo"/>
+    <h2>Invoice: {!Billing__c.Name}</h2>
+    
+    <h3>Customer Details</h3>
+    <p>Customer Name: {!Billing__c.Customer_and_Car_Detail__r.Customer_Name__c}</p>
+    <!-- Add more fields from Customer and Car Detail object as needed -->
+    
+    <h3>Item Details</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Inventory Item Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{!Billing__c.Inventory_Item__r.Name}</td>
+                <td>{!Billing__c.Quantity__c}</td>
+                <td>{!Billing__c.Product_Price__c}</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>Price Details</h3>
+    <p>Total before GST: {!Billing__c.Product_Price__c}</p>
+    <p>GST Amount ({!gstPercentage}%): {!gstAmount}</p>
+    <p><strong>Total Price:</strong> {!totalPrice}</p>
+
+    <button onclick="window.print();">Print Invoice</button>
+
+</apex:page>

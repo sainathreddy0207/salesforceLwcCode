@@ -1,0 +1,47 @@
+<template>
+    <div class="slds-p-horizontal_medium slds-p-vertical_small">
+        <lightning-input label="Enter Account Name" value={accountName} title="Please start typing account name" required onchange={handleAccountName}></lightning-input> <br />
+
+        <lightning-card title="Contact Information"></lightning-card>
+
+        Selected Account Name : {accountName}
+
+        <div class="slds-grid slds-wrap slds-gutters">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="First Name" value={firstName} onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="Last Name" value={lastName} required onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="Title" value={title} onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="Department" value={department} onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="Email" value={email} onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="Fax" value={fax} onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="Business Phone" value={phone} onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2">
+                <lightning-input label="Assistant" value={assistant} onchange={handleContactChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_1-of-2"><lightning-input label="Other Phone" value={otherphone} onchange={handleContactChange}></lightning-input> <br /></div>
+        </div>
+
+        <lightning-button variant="neutral" type="cancel" label="Cancel" onclick={handleCancel}></lightning-button>
+    </div>
+</template>

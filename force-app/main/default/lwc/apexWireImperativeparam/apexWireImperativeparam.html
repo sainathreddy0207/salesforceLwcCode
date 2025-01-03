@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Apex Wire with search">
+        <div class="slds-p-around_medium">
+            <lightning-input type="search" onchange={fetchhanlder} label="Search Accounts" value={searchKey}></lightning-input>
+            <template if:true={accounts}>
+                <template for:each={accounts} for:item="account">
+                    <div class="slds-box slds-box_xx-small" key={account.id}>
+
+                        <p><strong>Name: </strong> {account.Name}</p>
+                        <p><strong>Type: </strong> {account.Type}</p>
+                        <p><strong>Phone: </strong> {account.Phone}</p>
+
+                    </div>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>
